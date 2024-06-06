@@ -1,0 +1,89 @@
+{
+	"info": {
+		"_postman_id": "96a8315a-fe17-458e-86f6-373ed046f34e",
+		"name": "TretanzInfotechTask",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21340550"
+	},
+	"item": [
+		{
+			"name": "Create Form",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"formName\": \"User Registration\",\r\n  \"fields\": [\r\n    {\r\n      \"fieldName\": \"Name\",\r\n      \"fieldType\": \"Input\"\r\n    },\r\n    {\r\n      \"fieldName\": \"Gender\",\r\n      \"fieldType\": \"Radio\"\r\n    },\r\n    {\r\n      \"fieldName\": \"Profile Picture\",\r\n      \"fieldType\": \"File Upload\"\r\n    }\r\n  ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/forms/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"forms",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Form By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/forms/6661907e15ad0606c34692a2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"forms",
+						"6661907e15ad0606c34692a2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Submit Form",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"data\": {\r\n    \"Name\": \"John Doe\",\r\n    \"Gender\": \"Male\",\r\n    \"Profile Picture\": \"profile.jpg\"\r\n  }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/forms/submit/6661907e15ad0606c34692a2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"forms",
+						"submit",
+						"6661907e15ad0606c34692a2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
