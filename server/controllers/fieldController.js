@@ -1,4 +1,4 @@
-const Field = require('../models/Field');
+const {Field} = require('../models/Field');
 
 // Function to create a new field
 exports.createField = async (req, res) => {
